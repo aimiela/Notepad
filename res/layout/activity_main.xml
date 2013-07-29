@@ -8,9 +8,134 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
+    <RelativeLayout
+        android:id="@+id/styleLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/italic"
+            android:layout_width="@dimen/styleButton"
+            android:layout_height="@dimen/styleButton"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_off"
+            android:text="@string/italic" />
+
+        <Button
+            android:id="@+id/bold"
+            android:layout_width="@dimen/styleButton"
+            android:layout_height="@dimen/styleButton"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/italic"
+            android:background="@drawable/button_off"
+            android:text="@string/bold" />
+
+        <Button
+            android:id="@+id/underline"
+            android:layout_width="@dimen/styleButton"
+            android:layout_height="@dimen/styleButton"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/italic"
+            android:background="@drawable/button_off"
+            android:text="@string/underline" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/smileyLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/styleLayout"
+        android:layout_marginTop="12dp" >
+
+        <Button
+            android:id="@+id/veryhappy"
+            android:layout_width="@dimen/smileyButton"
+            android:layout_height="@dimen/smileyButton"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/smiley_veryhappy" />
+
+        <Button
+            android:id="@+id/happy"
+            android:layout_width="@dimen/smileyButton"
+            android:layout_height="@dimen/smileyButton"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@id/veryhappy"
+            android:background="@drawable/smiley_happy" />
+
+        <Button
+            android:id="@+id/wink"
+            android:layout_width="@dimen/smileyButton"
+            android:layout_height="@dimen/smileyButton"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/veryhappy"
+            android:background="@drawable/smiley_wink" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/colorGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/smileyLayout"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal" >
+        
+        <RadioButton android:id="@+id/black"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@color/black"
+			android:text="@string/black" />
+        
+        <RadioButton android:id="@+id/red"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@color/red"
+			android:text="@string/red" />
+        
+        <RadioButton android:id="@+id/green"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@color/green"
+			android:text="@string/green" />
+        
+        <RadioButton android:id="@+id/blue"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@color/blue"
+			android:text="@string/blue" />
+        
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/hide"
+        android:layout_width="@dimen/hide"
+        android:layout_height="@dimen/hide"
+        android:layout_below="@id/colorGroup"
+        android:layout_marginTop="12dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_off"
+        android:text="@string/hide" />
+    
+    <View android:id="@+id/sep"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/hide"
+        android:layout_marginTop="12dp"
+        android:background="#8a8a8a" />
+    
+    <EditText android:id="@+id/edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sep"
+        android:layout_marginTop="12dp"
+        android:hint="@string/edit"
+        android:lines="2" />
+    
+    <TextView android:id="@+id/result"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sep"
+        android:layout_marginTop="12dp"
+        android:text="@string/result" />
 
 </RelativeLayout>

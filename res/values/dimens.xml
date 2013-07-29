@@ -1,7 +1,12 @@
 <resources>
 
-    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!-- DEFAULT SCREEN MARGINS -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <!-- BUTTON SIZES -->
+	<dimen name="styleButton">50dp</dimen>
+	<dimen name="smileyButton">20dp</dimen>
+	<dimen name="hide">50dp</dimen>
 
 </resources>

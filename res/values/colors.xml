@@ -1,0 +1,7 @@
+<resources>
+    <!-- COLOR SELECTOR -->
+    <color name="black">#000000</color>
+    <color name="red">#DE2121</color>
+    <color name="green">#00FF51</color>
+    <color name="blue">#0F449E</color>
+</resources>

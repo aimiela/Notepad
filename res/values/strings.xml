@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+	
+    <!-- BASIC STRINGS -->
     <string name="app_name">Notepad</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+
+    <!-- STYLE STRINGS -->
+    <string name="bold">B</string>
+    <string name="italic">I</string>
+    <string name="underline">U</string>
+    
+    <!-- COLOR STRINGS -->
+    <string name="black">B</string>
+    <string name="red">R</string>
+    <string name="green">G</string>
+    <string name="blue">B</string>
+    
+    <!-- HIDE BUTTON -->
+    <string name="hide">Hide</string>
+    <string name="show">Show</string>
+    
+    <!-- EDIT TEXT -->
+    <string name="edit">Enter your text here</string>
+    <string name="result"></string>
 
 </resources>

@@ -27,15 +27,19 @@ public class HidingWatcher implements AnimationListener {
 		}
 	}
 	
-	public void onAnimationEnd(Animation animation) {
+	public void onAnimationEnd(Animation anim) {
 	    this.activity.getControlLayout().setLayoutParams(position);
+	    if(position.topMargin == - MainActivity.SIZE_CONTROLS)
+	    	this.activity.getControlLayout().setVisibility(0);
 	}
 
-	public void onAnimationRepeat(Animation animation) {
+	public void onAnimationRepeat(Animation anim) {
 		
 	}
 
-	public void onAnimationStart(Animation animation) {
+	public void onAnimationStart(Animation anim) {
+	    if(position.topMargin == 0)
+	    	this.activity.getControlLayout().setVisibility(1);
 	}
 
 }

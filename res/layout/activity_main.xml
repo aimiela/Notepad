@@ -92,7 +92,8 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:textColor="@color/black"
-				android:text="@string/black" />
+				android:text="@string/black"
+				android:checked="true" />
 	        
 	        <RadioButton android:id="@+id/red"
 				android:layout_width="wrap_content"
@@ -113,32 +114,33 @@
 				android:text="@string/blue" />
 	        
 	    </RadioGroup>
-	
-	    <ToggleButton
-	        android:id="@+id/hide"
-	        android:layout_width="@dimen/hide"
-	        android:layout_height="@dimen/hide"
-	        android:layout_below="@id/colorGroup"
-	        android:layout_marginTop="12dp"
-	        android:layout_centerHorizontal="true"
-	        android:background="@drawable/button_off"
-	        android:textOn="@string/hide" 
-	        android:textOff="@string/hide" />
-	    
-	    <View android:id="@+id/sep"
-	        android:layout_width="fill_parent"
-	        android:layout_height="2dp"
-	        android:layout_below="@id/hide"
-	        android:layout_marginTop="12dp"
-	        android:background="#8a8a8a" />
-	    
 	</RelativeLayout>
+	
+    <ToggleButton
+        android:id="@+id/hide"
+        android:layout_width="@dimen/hide"
+        android:layout_height="@dimen/hide"
+        android:layout_below="@id/controlLayout"
+        android:layout_marginTop="12dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_off"
+        android:textOn="@string/hide" 
+        android:textOff="@string/hide" />
+    
+    <View android:id="@+id/sep"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/hide"
+        android:layout_marginTop="12dp"
+        android:background="#8a8a8a" />
+	    
     
     <EditText android:id="@+id/edit"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/controlLayout"
+        android:layout_below="@id/sep"
         android:layout_marginTop="12dp"
+        android:gravity="top"
         android:hint="@string/edit"
         android:lines="3" />
     

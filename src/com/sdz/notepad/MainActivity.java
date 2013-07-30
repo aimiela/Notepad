@@ -36,6 +36,7 @@ public class MainActivity extends Activity {
 	private TextView result = null;
 	private EditWatcher editWatcher = null;
 	private ToggleButtonWatcher toggleButtonWatcher = null;
+	private ColorWatcher colorWatcher = null;
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -56,18 +57,17 @@ public class MainActivity extends Activity {
 		this.edit = (EditText) layout.findViewById(R.id.edit);
 		this.result = (TextView) layout.findViewById(R.id.result);
 		
-		// Initialize the animations
-		
-		
 		// Initialize the watchers
 		this.editWatcher = new EditWatcher(this);
 		this.toggleButtonWatcher = new ToggleButtonWatcher(this);
+		this.colorWatcher = new ColorWatcher(this);
 		
 		// Set the watchers
 		this.edit.addTextChangedListener(editWatcher);
 		this.bold.setOnCheckedChangeListener(toggleButtonWatcher);
 		this.italic.setOnCheckedChangeListener(toggleButtonWatcher);
 		this.underline.setOnCheckedChangeListener(toggleButtonWatcher);
+		this.colorGroup.setOnCheckedChangeListener(colorWatcher);
 		this.hide.setOnCheckedChangeListener(toggleButtonWatcher);
 		
 		setContentView(layout);
@@ -79,7 +79,6 @@ public class MainActivity extends Activity {
 		return true;
 	}
 
-
 	/* GETTERS */
 	public RelativeLayout getLayout() {
 		return layout;
@@ -89,6 +88,10 @@ public class MainActivity extends Activity {
 		return controlLayout;
 	}
 	
+	public RadioGroup getColorGroup() {
+		return colorGroup;
+	}
+	
 	public EditText getEdit() {
 		return edit;
 	}
@@ -96,6 +99,5 @@ public class MainActivity extends Activity {
 	public TextView getResult() {
 		return result;
 	}
-	
 
 }

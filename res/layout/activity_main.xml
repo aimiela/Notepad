@@ -60,7 +60,7 @@
 	            android:layout_width="@dimen/smileyButton"
 	            android:layout_height="@dimen/smileyButton"
 	            android:layout_centerHorizontal="true"
-	            android:background="@drawable/smiley_veryhappy" />
+	            android:background="@drawable/veryhappy" />
 	
 	        <Button
 	            android:id="@+id/happy"
@@ -68,7 +68,7 @@
 	            android:layout_height="@dimen/smileyButton"
 	            android:layout_marginRight="30dp"
 	            android:layout_toLeftOf="@id/veryhappy"
-	            android:background="@drawable/smiley_happy" />
+	            android:background="@drawable/happy" />
 	
 	        <Button
 	            android:id="@+id/wink"
@@ -76,7 +76,7 @@
 	            android:layout_height="@dimen/smileyButton"
 	            android:layout_marginLeft="30dp"
 	            android:layout_toRightOf="@id/veryhappy"
-	            android:background="@drawable/smiley_wink" />
+	            android:background="@drawable/wink" />
 	    </RelativeLayout>
 	
 	    <RadioGroup

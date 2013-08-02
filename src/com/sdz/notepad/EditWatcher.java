@@ -16,7 +16,7 @@ public class EditWatcher implements TextWatcher {
 	
 	public void afterTextChanged(Editable edit) {
 		if(activity != null) {
-			this.activity.getResult().setText(Html.fromHtml(edit.toString()));
+			this.activity.getResult().setText(Html.fromHtml(edit.toString(), activity, null));
 		}
 	}
 
